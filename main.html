@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+    <title>Hamster</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>TON SPACE KEEPER</h1>
+        </div>
+        <div class="button_container">
+            <div id="ton-connect" class="button"></div>
+        </div>
+    </div>  
+    <script>
+        const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+            manifestUrl: 'https://you.app/tonconnect-manifest.json',
+            buttonRootId: 'ton-connect'
+        });
+    </script>
+</body>
+</html>
