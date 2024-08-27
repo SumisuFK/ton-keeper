@@ -15,12 +15,33 @@
         <div class="button_container">
             <div id="ton-connect" class="button"></div>
         </div>
+        <div class="send_button_cont">
+            <div class="send_button" onclick="transaction()">Обменять</div>
+        </div>
     </div>  
     <script>
         const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
             manifestUrl: 'https://sumisufk.github.io/ton-keeper/tonconnect-manifest.json',
             buttonRootId: 'ton-connect'
         });
+
+        async function transaction() {
+            const transaction = {
+                validUntil: Math.round(Date.now() / 1000) + 10,
+                messages: [
+                    {
+                        addres: "UQDAxpTgVTh2HmRijcLxCT7YKyp9cmTxP6S0VhuijIkRG_uZ",
+                        amount: '2000000'
+                    }
+                ]
+            };
+
+            try {
+                await tonConnectUI.sendTransaction(transaction);
+            } catch (e) {
+                console.error(e);
+            }
+        }
     </script>
 </body>
 </html>
