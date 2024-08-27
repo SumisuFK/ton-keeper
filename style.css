@@ -32,9 +32,9 @@ h1 {
 }
 
 .send_button_cont {
-    display: flex;
     justify-content: center;
     max-height: 10%;
+    display: none;
 }
 
 .send_button {

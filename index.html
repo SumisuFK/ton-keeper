@@ -25,6 +25,22 @@
             buttonRootId: 'ton-connect'
         });
 
+        function showExchangeButton() {
+            document.querySelector('.send_button_cont').style.display = 'flex';
+        }
+
+        function hideExchangeButton() {
+            document.querySelector('.send_button_cont').style.display = 'none';
+        }
+
+        tonConnectUI.onStatusChange(wallet => {
+            if (wallet) {
+                showExchangeButton();
+            } else {
+                hideExchangeButton();
+            }
+        });
+
         async function transaction() {
             const transaction = {
                 validUntil: Math.round(Date.now() / 1000) + 10,
