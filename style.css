@@ -28,8 +28,36 @@ h1 {
     cursor: pointer;
     display: flex;
     justify-content: center;
+    transition-duration: 0.3s;
 }
 
-button:hover {
-    background-color: #006bb3;
+.button_container {
+    max-width: 205px;
+    margin: 0 32%;
+}
+
+.send_button_cont {
+    max-width: 140px;
+    margin: 0px 38%;
+}
+
+.send_button_cont:hover {
+    max-width: 140px;
+}
+
+.send_button {
+    color: #ffffff;
+    background-color: #0098EA;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 8%;
+}
+
+.send_button:hover {
+    font-size: 17px;
+    border-radius: 25px;
+}
+
+.send_button:active {
+    font-size: 15px;
 }
