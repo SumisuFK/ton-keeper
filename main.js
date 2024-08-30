@@ -12,8 +12,9 @@ inputAmount.addEventListener('input', () => {
 
 const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
   manifestUrl: 'https://sumisufk.github.io/ton-keeper/tonconnect-manifest.json',
-  buttonRootId: 'ton-connect'
+  buttonRootId: 'ton-connect',
 });
+
 
 function showExchangeButton() {
   document.querySelector('.send_button_cont').style.display = 'flex';
