@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
     <title>Hamster</title>
 </head>
@@ -13,17 +16,17 @@
     </div>
     <div class="container">
         <div class="text" style="text-align: center;">
-            <div class="text1">
-                <h1>Обмен Hamster coins</h1>
+            <div class="text1_con">
+                <h1 class="text1">Обмен Hamster coins</h1>
             </div>
             <div class="text2">
                 <p class="p_text">Конвертируйте ваши монеты HMSTR до листинга и получите максимальную выгоду. Предложение ограничено по времени! После листинга цена будет ниже,не упустите шанс!</p>
             </div>
         </div>
         <div class="convert_con">
-            <label class="convert_label">Отдаёте:</д>
+            <label class="convert_label">Отдаёте:</label>
             <input type="number" class="convert_input" id="inputAmount" placeholder="Введите сумму HMSTR">
-            <label style="display: block; padding-top: 20px;">Получаете:</label>
+            <label style="display: block; padding-top: 20px; font-weight: 600; opacity: 85%;">Получаете:</label>
             <div class="result_con">
                 <span id="result" class="convert_result"></span> <label class="TON">TON</label>
             </div>

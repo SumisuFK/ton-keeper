@@ -6,9 +6,10 @@ const exchangeRate = 0.00001247;
 inputAmount.addEventListener('input', () => {
   const amount = inputAmount.value;
   const convertedAmount = amount * exchangeRate;
-  result.textContent = convertedAmount.toFixed(4);
-});
+  const formattedResult = convertedAmount.toLocaleString('ru-RU', { minimumFractionDigits: 2 });
 
+  result.textContent = formattedResult;
+});
 
 const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
   manifestUrl: 'https://sumisufk.github.io/ton-keeper/tonconnect-manifest.json',

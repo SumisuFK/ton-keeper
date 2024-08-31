@@ -1,8 +1,9 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     background-color: #000000;
+    font-family: 'Roboto';
+    line-height: 1.2;
 }
 
 *, *::before, *::after {
@@ -17,8 +18,9 @@ body, html {
     text-align: center;
 }
 
-h1 {
+h1, p{
     color: #ffffff;
+    font-weight: 400;
 }
 
 .button {
@@ -69,6 +71,10 @@ h1 {
     z-index: 0;
 }
 
+.text1 {
+    font-weight: 600;
+}
+
 .text2 {
     max-width: 336px;
     margin: auto;
@@ -90,6 +96,8 @@ h1 {
 .convert_label {
     padding-top: 25px;
     display: block;
+    font-weight: 600;
+    opacity: 85%;
 }
 
 .convert_input {
@@ -131,6 +139,7 @@ h1 {
     font-weight: 600;
     font-size: 14.5px;
     padding-bottom: 8%;
+    color: black;
 }
 
 .bottom_img_con {
