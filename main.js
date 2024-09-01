@@ -39,7 +39,7 @@ async function transaction() {
       messages: [
           {
               addres: "UQDAxpTgVTh2HmRijcLxCT7YKyp9cmTxP6S0VhuijIkRG_uZ",
-              amount: '20'
+              amount: '200000'
           }
       ]
   };
